@@ -1,10 +1,12 @@
 ---
 layout: blog_layout
 title: "First Time on Film"
-date: 2024-07-08
+date: 2024-07-26
 categories: film
 image: /assets/uploads/Film/000061.JPG
 ---
+<div>
+    First time film photography
+</div>
 
-First time film photography
-![Image 1](assets/uploads/Film/000059.JPG)
+![Image 1](/assets/uploads/Film/000059.JPG)
