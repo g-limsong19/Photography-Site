@@ -3,11 +3,8 @@ layout: blog_layout
 title: "First Time on Film"
 date: 2024-07-08
 categories: film
-image: /assets/uploads/Hua_Hin/DSCF0240.jpg
+image: /assets/uploads/Film/000061.JPG
 ---
 
-Gas Station Pictures from Hua Hin Trip.
-
-Long exposure experiment
-![Long Exposure Experiment](/assets/uploads/Hua_Hin/DSCF0250_DxO.jpg)
-
+First time film photography
+![Image 1](assets/uploads/Film/000059.JPG)

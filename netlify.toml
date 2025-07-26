@@ -1,0 +1,7 @@
+[build]
+    publish = "site"
+    command = "jekyll build"
+
+[build.environment]
+    JEKYLL_ENV = "production"
+    RUBY_VERSION = "3.1.7"
