@@ -1,5 +1,5 @@
 # Photography Journey Blog Site
-#### Video Demo URL:  <(https://youtu.be/724L_Fz5ei4)>
+#### Video Demo URL:  <(https://youtu.be/RGvPKLLFyw0)>
 #### Description: I created a blog website to document my photography journey and progress
 
 
