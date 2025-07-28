@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+</head>
+<body>
+    <header>
+    <h1 class="text-center text-white m-0">Photography Journey</h1>
+    <h3 class="text-center m-0">@noobshooter_bkk</h3>
+    <nav class="navbar navbar-expand-md navbar-dark custom-navbar">
+        <div class="container-fluid">
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mx-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blogs/">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/" id="searchButton">&#128269;</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hidden Search box (visible when click search icon) -->
+    <div id="searchArea">
+        <div class="search-container">
+            <input type="text" id="searchBox" class="form-control rounded" placeholder="Search this site..." autocomeplete="off">
+            <button id="closeSearch">&times;</button>
+        </div>
+    </div>
+
+    <script>
+        // Had some guidelines from Claude
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchButton = document.getElementById('searchButton');
+            const searchArea = document.getElementById('searchArea');
+            const searchBox = document.getElementById('searchBox');
+            const closeSearch = document.getElementById('closeSearch');
+
+        // Show searchArea when searchButton is clicked
+            searchButton.onclick = function(e) {
+                e.preventDefault();
+                searchArea.classList.add('active');
+            };
+
+        // Close searchArea when closeSearch is clicked
+            closeSearch.onclick = function() {
+                searchArea.classList.remove('active');
+            };
+
+        });
+    </script>
+
+</header>
+
+
+    <main class="container mt-5">
+        <h1 id="about-me">About Me</h1>
+
+<p><br /></p>
+<div class="container-fluid">
+    <div class="row align-items-start">
+        <div class="col" style="padding-left: 0; padding-right: 20px;">
+            <img src="/assets/uploads/aboutmepic.jpg" alt="me" class="img-fluid" style="max-width: 100%;" />
+        </div>
+        <div class="col" style="font-size: 2.2vh;">
+            I am a hobbyist photographer based in Bangkok.
+            <br />
+            <br />
+            I will use this blog site to document my photography journey as I learn new techniques and travel to different places.
+        </div>
+    </div>
+</div>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

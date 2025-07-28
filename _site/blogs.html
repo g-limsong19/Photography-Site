@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+</head>
+<body>
+    <header>
+    <h1 class="text-center text-white m-0">Photography Journey</h1>
+    <h3 class="text-center m-0">@noobshooter_bkk</h3>
+    <nav class="navbar navbar-expand-md navbar-dark custom-navbar">
+        <div class="container-fluid">
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mx-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blogs/">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/" id="searchButton">&#128269;</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hidden Search box (visible when click search icon) -->
+    <div id="searchArea">
+        <div class="search-container">
+            <input type="text" id="searchBox" class="form-control rounded" placeholder="Search this site..." autocomeplete="off">
+            <button id="closeSearch">&times;</button>
+        </div>
+    </div>
+
+    <script>
+        // Had some guidelines from Claude
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchButton = document.getElementById('searchButton');
+            const searchArea = document.getElementById('searchArea');
+            const searchBox = document.getElementById('searchBox');
+            const closeSearch = document.getElementById('closeSearch');
+
+        // Show searchArea when searchButton is clicked
+            searchButton.onclick = function(e) {
+                e.preventDefault();
+                searchArea.classList.add('active');
+            };
+
+        // Close searchArea when closeSearch is clicked
+            closeSearch.onclick = function() {
+                searchArea.classList.remove('active');
+            };
+
+        });
+    </script>
+
+</header>
+
+
+    <main class="container mt-5">
+        <!-- The Sidebar is based on W3 school's template: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_sidebar_shift -->
+<!-- Had a bit of help from Claude for formatting and filter select highlight-->
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <div class="w3-container">
+        <div style="display: flex; margin-bottom: 1rem; flex-wrap: wrap;">
+            <input type="text" placeholder="Search in blogs... " id="query" style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; height: 40px;" />
+            <button type="submit" id="blog-search-button" style="width: 40px; height: 40px; border-radius: 4px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                <i class="fa fa-search" style="font-size: 20px;"></i>
+            </button>
+            <br />
+        </div>
+        Photography Type
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="digital" />
+            <label class="form-check-label" for="digital">
+                Digital
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="film" />
+            <label class="form-check-label" for="film">
+                Film
+            </label>
+        </div>
+    </div>
+</div>
+
+<div id="main" class="page-content">
+    <div class="w3-container">
+        <h1>Blogs</h1>
+        <div class="d-flex align-items-center my-4">
+            <button id="openNav" class="w3-button w3-xlarge" title="Blogs filter" onclick="w3_open()">&#9776;</button>
+            <h3>Latest Posts</h3>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <div class="row">
+            
+                <div class="col-md-4 mb-4 blog-card" data-category="film">
+                    <div class="card">
+                    <img src="/assets/uploads/Film/000061.JPG" class="card-img-top" alt="First Time on Film" />
+                        <div class="card-body">
+                            <h4 class="card-title">First Time on Film</h4>
+                            <p class="card-text">First time experience with film photography</p>
+                            <div class="full-content" data-full-content="
+    First time film photography
+
+
+
+"></div>
+                            <span class="badge bg-info">film</span>
+                            <a href="/film/2024/07/26/First-Film.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 mb-4 blog-card" data-category="digital">
+                    <div class="card">
+                    <img src="/assets/uploads/Hua_Hin/DSCF0240.jpg" class="card-img-top" alt="Hua Hin" />
+                        <div class="card-body">
+                            <h4 class="card-title">Hua Hin</h4>
+                            <p class="card-text">Collection of pictures from Hua Hin trip</p>
+                            <div class="full-content" data-full-content="Gas Station Pictures from Hua Hin Trip.
+
+Long exposure experiment
+
+
+"></div>
+                            <span class="badge bg-info">digital</span>
+                            <a href="/digital/2024/07/08/Hua_Hin_Trip.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 mb-4 blog-card" data-category="digital">
+                    <div class="card">
+                    <img src="/assets/uploads/DSCF0395.jpg" class="card-img-top" alt="Test" />
+                        <div class="card-body">
+                            <h4 class="card-title">Test</h4>
+                            <p class="card-text">Test post</p>
+                            <div class="full-content" data-full-content="This is a test post.
+
+Test img include:
+
+
+"></div>
+                            <span class="badge bg-info">digital</span>
+                            <a href="/digital/2024/07/08/test.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    // W3 school's sidebar template
+    let sidebarOpen = false;
+
+    function toggleSidebar() {
+        if (sidebarOpen) {
+            w3_close();
+        } else {
+            w3_open();
+        }
+    }
+
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+        sidebarOpen = true;
+
+    }
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+        sidebarOpen = false;
+    }
+
+    // Obtain header height so the filter sidebar can be adjusted inline with content
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
+    console.log('Header height:', headerHeight + 'px');
+
+
+    // had help from Claude with filter function
+    function filterBlogs() {
+        const digitalChecked = document.getElementById('digital').checked;
+        const filmChecked = document.getElementById('film').checked;
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        // Learned this syntax with Claude
+        blogCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            let showCard = false;
+
+            // Show all cards if no category selected
+            if (!digitalChecked && !filmChecked) {
+                showCard = true;
+            }
+            // Show card if card category matches checked category
+            else if (digitalChecked && category == 'digital') {
+                showCard = true;
+            }
+            else if (filmChecked && category == 'film') {
+                showCard = true;
+            }
+
+            if (showCard) {
+                card.classList.remove('hidden');
+            }
+            else {
+                card.classList.add('hidden');
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('digital').addEventListener('click', filterBlogs);
+        document.getElementById('film').addEventListener('click', filterBlogs);
+
+        filterBlogs();
+    });
+
+
+    // Blog search function - a bit of help from claude
+    function blogSearch() {
+    const query = document.getElementById('query').value.toLowerCase().trim();
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    blogCards.forEach(card => {
+        // Get all text content from the card
+        const cardText = card.textContent.toLowerCase();
+
+        // Claude for these two variables
+        const fullContentElement = card.querySelector('[data-full-content]');
+        const fullContent = fullContentElement ? fullContentElement.getAttribute('data-full-content').toLowerCase() : '';
+
+        // Check if query matches any content in the card
+        if (cardText.includes(query) || fullContent.includes(query)) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+}
+
+    //  EventListeners for the searchbar
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('query');
+        const searchButton = document.getElementById('blog-search-button');
+
+        // Search on button click
+        searchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            blogSearch();
+        });
+
+        // Search on Enter key press
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                blogSearch();
+            }
+        });
+
+        // Real-time search as user types
+        searchInput.addEventListener('input', function() {
+            blogSearch();
+        });
+    });
+
+</script>
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

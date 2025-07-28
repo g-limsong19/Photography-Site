@@ -1,0 +1,35 @@
+title: Photography Journey
+
+baseurl: ""
+url: ""
+
+# Include admin folder so Jekyll serves it
+include:
+  - admin
+
+# Tell Jekyll where to find uploads and posts
+collections:
+  posts:
+    output: true
+
+# Set where static files are placed
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Exclude unnecessary files from production
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+
+# I used ChatGPT to get guildlines for this
